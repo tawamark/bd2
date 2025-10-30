@@ -1,0 +1,33 @@
+﻿@model ICollection<Floricultura.Models.Plant>
+
+@{
+    ViewData["Title"] = "Plant Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">
+        @Model.Count Cursos.
+    </h1>
+
+    <table class="table table-responsive table-hover table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>SensorValue</th>
+                <th>SensorEvent</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var p in Model)
+            {
+                <tr>
+                    <td>@p.id</td>
+                    <td>@p.Name</td>
+                    <td>@p.SensorValue</td>
+                    <td>@p.SensorEvent</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
